@@ -17,7 +17,7 @@
 
 
 
-        <input type="text">
+        <input type="number" name="getNum">
 
         <button type="submit">Invia</button>
 
