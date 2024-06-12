@@ -1,6 +1,8 @@
 <?php
- $getNum = array_key_exists( 'getNum' , $_GET ) ? $_GET['getNum'] : '' ;
-    $getX= 0
+            $getNum = array_key_exists('getNum', $_GET) ? $_GET['getNum'] : '';
+            $getX = 0;
+            $getSymbol = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","X","Y","Z" ,"1","2","3","4","5","6","7","8","9","0","£","$","%","&","/","@","#","*"."+","§","ç"];
+            
 ?>
 
 <!DOCTYPE html>
@@ -20,12 +22,13 @@
 <body class="myBg">
 
     <section class="d-flex container justify-content-between flex-wrap">
-        
         <h5>
             <?php
-                for ($getX = 1; $getX <= $getNum; ++$getX) {
-                    
-                    echo "x";
+            // var_dump($getSymbol);
+                for ($getX = 0; $getX < $getNum; ++$getX) {
+                    $indexRandom = rand(0,72);
+
+                    echo  " " . $getSymbol[$indexRandom] . " ";
                 }
             ?>
         </h5>
