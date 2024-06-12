@@ -6,13 +6,13 @@ $getSymbol = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "
 ?>
 
 <?php
-function getPassword($getX, $getNum, $getSymbol)
+function getPassword($x, $y, $z)
 {
 
-    for ($getX = 0; $getX < $getNum; ++$getX) {
+    for ($x = 0; $x < $y; ++$x) {
         $indexRandom = rand(0, 70);
 
-        echo  $getSymbol[$indexRandom];
+        echo  $z[$indexRandom];
     }
 }
 

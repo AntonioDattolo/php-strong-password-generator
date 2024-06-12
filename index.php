@@ -19,20 +19,25 @@ $getSymbol = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "
 </head>
 
 <body class="myBg">
-    <section>
-
-        <form method="GET">
+    <section class="container my-3">
+        <h1 class="my-3">PassWord GenEraTor</h1>
+        <form method="GET" class="my-4">
             <input type="number" name="getNum">
             <button type="submit" name="crea_pass">Invia</button>
         </form>
     </section>
-    <section class="d-flex container justify-content-between flex-wrap text-collapse">
+    <section class="container">
         <h5>
             La Tua SICURISSIMA PASSWORD é :
-            <?php
-            // getPassword($getX,$getNum,$getSymbol)
-            include 'function.php'
-            ?>
+            <h3 class="text-center">
+
+                <?php
+
+                // getPassword($getX,$getNum,$getSymbol)
+                include 'function.php'
+
+                ?>
+            </h3>
         </h5>
     </section>
     <!-- <script src="./js/main.js"></script> -->
