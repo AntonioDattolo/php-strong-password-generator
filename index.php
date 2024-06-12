@@ -1,3 +1,9 @@
+<?php
+$getNum = array_key_exists('getNum', $_GET) ? $_GET['getNum'] : '';
+$getX = 0;
+$getSymbol = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "£", "$", "%", "&", "/", "@", "#", "*" . "+", "§", "ç"];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,15 +19,22 @@
 </head>
 
 <body class="myBg">
-    <form method="GET" action="doit.php">
+    <section>
 
-
-
-        <input type="number" name="getNum">
-
-        <button type="submit">Invia</button>
-
-    </form>
+        <form method="GET">
+            <input type="number" name="getNum">
+            <button type="submit" name="crea_pass">Invia</button>
+        </form>
+    </section>
+    <section class="d-flex container justify-content-between flex-wrap text-collapse">
+        <h5>
+            La Tua SICURISSIMA PASSWORD é :
+            <?php
+            // getPassword($getX,$getNum,$getSymbol)
+            include 'function.php'
+            ?>
+        </h5>
+    </section>
     <!-- <script src="./js/main.js"></script> -->
 </body>
 
