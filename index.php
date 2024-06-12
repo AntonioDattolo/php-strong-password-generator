@@ -1,7 +1,13 @@
 <?php
 $getNum = array_key_exists('getNum', $_GET) ? $_GET['getNum'] : '';
-$getX = 0;
-$getSymbol = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "£", "$", "%", "&", "/", "@", "#", "*" . "+", "§", "ç"];
+$getCharacter =  array_key_exists('getCharacter', $_GET) ? $_GET['getCharacter'] : '';
+$getNumber =  array_key_exists('getNumber', $_GET) ? $_GET['getNumber'] : '';
+$getSymbol =  array_key_exists('getSymbol', $_GET) ? $_GET['getSymbol'] : '';
+// $getX = 0;
+$dataToUse = [];
+$characters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "X", "Y", "Z"];
+$number = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+$simbols = ["£", "$", "%", "&", "/", "@", "#", "*" . "+", "§", "ç"];
 ?>
 
 <!DOCTYPE html>
@@ -22,8 +28,20 @@ $getSymbol = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "
     <section class="container my-3">
         <h1 class="my-3">PassWord GenEraTor</h1>
         <form method="GET" class="my-4">
-            <input type="number" name="getNum">
+            <input type="number" name="getNum" min="1" max="20" placeholder="Chose password's lenght" style="width: 250px;">
             <button type="submit" name="crea_pass">Invia</button>
+            <label for="getCharacter">
+                Characters
+            </label>
+            <input type="checkbox" name="getCharacter" value="true">
+            <label for="getNumber">
+                Number
+            </label>
+            <input type="checkbox" name="getNumber" value="true">
+            <label for="getSymbol">
+                Simbols
+            </label>
+            <input type="checkbox" name="getSymbol" value="true">
         </form>
     </section>
     <section class="container">
